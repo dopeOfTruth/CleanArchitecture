@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E12637FB4300F34030 /* UIButton + Extension.swift */; };
+		287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E32637FD1200F34030 /* UIStackView + Extension.swift */; };
 		2885D0E02637DD9F00D0FC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */; };
 		2885D0E22637DD9F00D0FC12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */; };
-		2885D0E42637DD9F00D0FC12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0E32637DD9F00D0FC12 /* ViewController.swift */; };
+		2885D0E42637DD9F00D0FC12 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0E32637DD9F00D0FC12 /* WelcomeViewController.swift */; };
 		2885D0E72637DD9F00D0FC12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2885D0E52637DD9F00D0FC12 /* Main.storyboard */; };
 		2885D0E92637DDA200D0FC12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2885D0E82637DDA200D0FC12 /* Assets.xcassets */; };
 		2885D0EC2637DDA200D0FC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2885D0EA2637DDA200D0FC12 /* LaunchScreen.storyboard */; };
+		2885D0F52637E1DC00D0FC12 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0F42637E1DC00D0FC12 /* NetworkService.swift */; };
+		2885D0F92637E91300D0FC12 /* AsteroidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0F82637E91300D0FC12 /* AsteroidModel.swift */; };
+		2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FB2637ECE200D0FC12 /* APODModel.swift */; };
+		2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FF2637EE1700D0FC12 /* APODViewController.swift */; };
+		2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287C49E12637FB4300F34030 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		287C49E32637FD1200F34030 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		2885D0DC2637DD9F00D0FC12 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2885D0E32637DD9F00D0FC12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2885D0E32637DD9F00D0FC12 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2885D0E62637DD9F00D0FC12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2885D0E82637DDA200D0FC12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2885D0EB2637DDA200D0FC12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2885D0ED2637DDA200D0FC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2885D0F42637E1DC00D0FC12 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2885D0F82637E91300D0FC12 /* AsteroidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidModel.swift; sourceTree = "<group>"; };
+		2885D0FB2637ECE200D0FC12 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
+		2885D0FF2637EE1700D0FC12 /* APODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
+		2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		287C49DC2637F30100F34030 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				2885D0FF2637EE1700D0FC12 /* APODViewController.swift */,
+				2885D0FB2637ECE200D0FC12 /* APODModel.swift */,
+			);
+			path = APOD;
+			sourceTree = "<group>";
+		};
+		287C49DD2637F34000F34030 /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */,
+				2885D0F82637E91300D0FC12 /* AsteroidModel.swift */,
+			);
+			path = Asteroids;
+			sourceTree = "<group>";
+		};
+		287C49DE2637F37300F34030 /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				2885D0E32637DD9F00D0FC12 /* WelcomeViewController.swift */,
+			);
+			path = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		287C49DF2637FB1C00F34030 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				287C49E02637FB2900F34030 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		287C49E02637FB2900F34030 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				287C49E12637FB4300F34030 /* UIButton + Extension.swift */,
+				287C49E32637FD1200F34030 /* UIStackView + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		2885D0D32637DD9F00D0FC12 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +115,25 @@
 			children = (
 				2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */,
 				2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */,
-				2885D0E32637DD9F00D0FC12 /* ViewController.swift */,
+				2885D1052637F03100D0FC12 /* Services */,
+				287C49DE2637F37300F34030 /* WelcomeVC */,
+				287C49DC2637F30100F34030 /* APOD */,
+				287C49DD2637F34000F34030 /* Asteroids */,
+				287C49DF2637FB1C00F34030 /* Extensions */,
 				2885D0E52637DD9F00D0FC12 /* Main.storyboard */,
 				2885D0E82637DDA200D0FC12 /* Assets.xcassets */,
 				2885D0EA2637DDA200D0FC12 /* LaunchScreen.storyboard */,
 				2885D0ED2637DDA200D0FC12 /* Info.plist */,
 			);
 			path = TestApp;
+			sourceTree = "<group>";
+		};
+		2885D1052637F03100D0FC12 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2885D0F42637E1DC00D0FC12 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2885D0E42637DD9F00D0FC12 /* ViewController.swift in Sources */,
+				2885D0E42637DD9F00D0FC12 /* WelcomeViewController.swift in Sources */,
+				2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */,
+				2885D0F92637E91300D0FC12 /* AsteroidModel.swift in Sources */,
+				287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */,
+				2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */,
 				2885D0E02637DD9F00D0FC12 /* AppDelegate.swift in Sources */,
+				287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */,
+				2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */,
+				2885D0F52637E1DC00D0FC12 /* NetworkService.swift in Sources */,
 				2885D0E22637DD9F00D0FC12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
