@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285ADE882638422C008F7004 /* UIColor + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ADE872638422C008F7004 /* UIColor + Extension .swift */; };
 		287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E12637FB4300F34030 /* UIButton + Extension.swift */; };
 		287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E32637FD1200F34030 /* UIStackView + Extension.swift */; };
+		287C49E92638139E00F34030 /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E82638139E00F34030 /* AsteroidCell.swift */; };
+		287C49ED263824BE00F34030 /* NetworkDataFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49EC263824BE00F34030 /* NetworkDataFeatcher.swift */; };
+		287C49EF2638255D00F34030 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49EE2638255D00F34030 /* API.swift */; };
 		2885D0E02637DD9F00D0FC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */; };
 		2885D0E22637DD9F00D0FC12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */; };
 		2885D0E42637DD9F00D0FC12 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0E32637DD9F00D0FC12 /* WelcomeViewController.swift */; };
@@ -20,11 +24,17 @@
 		2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FB2637ECE200D0FC12 /* APODModel.swift */; };
 		2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FF2637EE1700D0FC12 /* APODViewController.swift */; };
 		2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */; };
+		415ABD1AEB853AFC4A274943 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B044EEC2A3AAE00AEED111EA /* Pods_TestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F57EF68321A86CC27530A9 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		285ADE872638422C008F7004 /* UIColor + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension .swift"; sourceTree = "<group>"; };
 		287C49E12637FB4300F34030 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		287C49E32637FD1200F34030 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		287C49E82638139E00F34030 /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
+		287C49EC263824BE00F34030 /* NetworkDataFeatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFeatcher.swift; sourceTree = "<group>"; };
+		287C49EE2638255D00F34030 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2885D0DC2637DD9F00D0FC12 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +48,8 @@
 		2885D0FB2637ECE200D0FC12 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
 		2885D0FF2637EE1700D0FC12 /* APODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 		2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
+		B044EEC2A3AAE00AEED111EA /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CD1A74635E3571403E0BBA /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415ABD1AEB853AFC4A274943 /* Pods_TestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 		287C49DD2637F34000F34030 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				287C49E5263807E400F34030 /* Cell */,
 				2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */,
 				2885D0F82637E91300D0FC12 /* AsteroidModel.swift */,
 			);
@@ -90,8 +104,17 @@
 			children = (
 				287C49E12637FB4300F34030 /* UIButton + Extension.swift */,
 				287C49E32637FD1200F34030 /* UIStackView + Extension.swift */,
+				285ADE872638422C008F7004 /* UIColor + Extension .swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		287C49E5263807E400F34030 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				287C49E82638139E00F34030 /* AsteroidCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2885D0D32637DD9F00D0FC12 = {
@@ -99,6 +122,8 @@
 			children = (
 				2885D0DE2637DD9F00D0FC12 /* TestApp */,
 				2885D0DD2637DD9F00D0FC12 /* Products */,
+				2DD626FF7DF885B86F58C60B /* Pods */,
+				8174AD87A50A45304EF81D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,8 +157,27 @@
 			isa = PBXGroup;
 			children = (
 				2885D0F42637E1DC00D0FC12 /* NetworkService.swift */,
+				287C49EC263824BE00F34030 /* NetworkDataFeatcher.swift */,
+				287C49EE2638255D00F34030 /* API.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2DD626FF7DF885B86F58C60B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09F57EF68321A86CC27530A9 /* Pods-TestApp.debug.xcconfig */,
+				E5CD1A74635E3571403E0BBA /* Pods-TestApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8174AD87A50A45304EF81D1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B044EEC2A3AAE00AEED111EA /* Pods_TestApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2885D0F02637DDA200D0FC12 /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
+				B89A01241F50DB4E40D23641 /* [CP] Check Pods Manifest.lock */,
 				2885D0D82637DD9F00D0FC12 /* Sources */,
 				2885D0D92637DD9F00D0FC12 /* Frameworks */,
 				2885D0DA2637DD9F00D0FC12 /* Resources */,
@@ -201,17 +246,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B89A01241F50DB4E40D23641 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2885D0D82637DD9F00D0FC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287C49ED263824BE00F34030 /* NetworkDataFeatcher.swift in Sources */,
 				2885D0E42637DD9F00D0FC12 /* WelcomeViewController.swift in Sources */,
 				2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */,
 				2885D0F92637E91300D0FC12 /* AsteroidModel.swift in Sources */,
+				285ADE882638422C008F7004 /* UIColor + Extension .swift in Sources */,
 				287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */,
 				2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */,
 				2885D0E02637DD9F00D0FC12 /* AppDelegate.swift in Sources */,
+				287C49E92638139E00F34030 /* AsteroidCell.swift in Sources */,
+				287C49EF2638255D00F34030 /* API.swift in Sources */,
 				287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */,
 				2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */,
 				2885D0F52637E1DC00D0FC12 /* NetworkService.swift in Sources */,
@@ -359,6 +433,7 @@
 		};
 		2885D0F12637DDA200D0FC12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F57EF68321A86CC27530A9 /* Pods-TestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +453,7 @@
 		};
 		2885D0F22637DDA200D0FC12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5CD1A74635E3571403E0BBA /* Pods-TestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

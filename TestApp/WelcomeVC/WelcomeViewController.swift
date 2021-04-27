@@ -9,14 +9,14 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    let goToApodVCButton = UIButton(title: "Astronomy Picture of the Day", titleColor: .white, backgroundColor: #colorLiteral(red: 0.1694421172, green: 0.1881708503, blue: 0.2226838171, alpha: 1), fontSize: 20, cornerRadius: 8)
-    let goToAsteroidsVCButton = UIButton(title: "Near Earth Objects", titleColor: .white, backgroundColor: #colorLiteral(red: 0.1694421172, green: 0.1881708503, blue: 0.2226838171, alpha: 1), fontSize: 20, cornerRadius: 8)
+    let goToApodVCButton = UIButton(title: "Astronomy Picture of the Day", titleColor: .white, backgroundColor: .backgroundForElements(), fontSize: 20, cornerRadius: 8)
+    let goToAsteroidsVCButton = UIButton(title: "Near Earth Objects", titleColor: .white, backgroundColor: .backgroundForElements(), fontSize: 20, cornerRadius: 8)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = #colorLiteral(red: 0.1105096862, green: 0.1294138432, blue: 0.1595476866, alpha: 1)
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1694421172, green: 0.1881708503, blue: 0.2226838171, alpha: 1)
+        view.backgroundColor = .mainBackground()
+        navigationController?.navigationBar.barTintColor = .backgroundForElements()
         setupConstraints()
         
         goToAsteroidsVCButton.addTarget(self, action: #selector(goToAsteroidsVCButtonTapped), for: .touchUpInside)

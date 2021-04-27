@@ -11,14 +11,17 @@ import Foundation
 struct AsteroidModel: Codable {
 
     let nearEarthObjects: [NearEarthObject]
+    
 
     enum CodingKeys: String, CodingKey {
         case nearEarthObjects = "near_earth_objects"
     }
+    
+
 }
 
 // MARK: - NearEarthObject
-struct NearEarthObject: Codable {
+struct NearEarthObject: Codable, Hashable {
     let links: NearEarthObjectLinks
     let id, neoReferenceID, name, nameLimited: String
     let designation: String
@@ -43,6 +46,14 @@ struct NearEarthObject: Codable {
         case closeApproachData = "close_approach_data"
         case orbitalData = "orbital_data"
         case isSentryObject = "is_sentry_object"
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: NearEarthObject, rhs: NearEarthObject) -> Bool {
+        lhs.id == rhs.id
     }
 }
 
