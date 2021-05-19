@@ -7,13 +7,30 @@
 
 import UIKit
 
-class AsteroidsViewController: UIViewController {
+protocol AsteroidsDisplayLogic: AnyObject {
+    
+    func displayAsteroids(viewModel: Asteroids.FetchData.ViewModel)
+}
+
+class AsteroidsViewController: UIViewController, AsteroidsDisplayLogic {
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let ai = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        ai.color = .white
+        ai.center = view.center
+        view.addSubview(ai)
+        return ai
+    }()
+    
+    var interactor: AsteroidsBusinessLogic?
+    var router: (NSObjectProtocol & AsteroidsDataPassing & AsteroidsRouterProtocol)?
     
     var asteroidsTableView = UITableView()
     
-    var asteroids: [NearEarthObject] = []
+    typealias Asteroid = Asteroids.FetchData.ViewModel.Object
     
-    var cellHeight: CGFloat = 0.2
+    var asteroids: [Asteroid] = []
+    
     var moreButtonIsTapped = false
     
     enum Section: Int, CaseIterable {
@@ -21,21 +38,40 @@ class AsteroidsViewController: UIViewController {
     }
     
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, NearEarthObject>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Asteroid>!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        AsteroidsConfigurator.shared.configure(view: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        AsteroidsConfigurator.shared.configure(view: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkDataFeatcher.shared.getAsteroids { asteroids in
-            self.asteroids = asteroids
-            self.reloadData()
-            
-            
-        }
+        let request = Asteroids.FetchData.Request()
+        interactor?.fetchAsteroids(request: request)
         
         setupCollectionView()
         createDataSource()
-
+        
+        activityIndicator.startAnimating()
+    }
+    
+    
+    func displayAsteroids(viewModel: Asteroids.FetchData.ViewModel) {
+        
+        asteroids = viewModel.objects
+        DispatchQueue.main.async {
+            self.reloadData()
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+        }
     }
     
     private func setupCollectionView() {
@@ -53,7 +89,7 @@ class AsteroidsViewController: UIViewController {
     
     private func reloadData() {
 
-        var snapShot = NSDiffableDataSourceSnapshot<Section, NearEarthObject>()
+        var snapShot = NSDiffableDataSourceSnapshot<Section, Asteroid>()
         snapShot.appendSections([.asteroids])
         snapShot.appendItems(asteroids, toSection: .asteroids)
         dataSource?.apply(snapShot, animatingDifferences: true)
@@ -111,7 +147,7 @@ extension AsteroidsViewController {
     
     private func createDataSource() {
         
-        dataSource = UICollectionViewDiffableDataSource<Section, NearEarthObject>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, user) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Asteroid>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, asteroid) -> UICollectionViewCell? in
             
             guard let section = Section.init(rawValue: indexPath.section) else {
                 fatalError("Unknown section kind")
@@ -135,5 +171,11 @@ extension AsteroidsViewController {
 
 extension AsteroidsViewController: UICollectionViewDelegate {
 
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let asteroid = dataSource.itemIdentifier(for: indexPath) else { return }
+        let url = asteroid.url
+        let request = Asteroids.SendURL.Request(url: url)
+        interactor?.sendAsteroidURL(request: request)
+        router?.routeToAsteroidDetailVC(segue: nil)
+    }
 }

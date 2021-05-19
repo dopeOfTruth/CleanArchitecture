@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		285ADE882638422C008F7004 /* UIColor + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ADE872638422C008F7004 /* UIColor + Extension .swift */; };
+		285ADE8B263853BB008F7004 /* AsteroidDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ADE8A263853BB008F7004 /* AsteroidDetailVC.swift */; };
+		2879001A2654DFA40099AB53 /* AsteroidsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287900192654DFA40099AB53 /* AsteroidsRouter.swift */; };
+		2879001C2654E5CE0099AB53 /* AsteroidDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879001B2654E5CE0099AB53 /* AsteroidDetailInteractor.swift */; };
+		2879001E2654E5D60099AB53 /* AsteroidDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879001D2654E5D60099AB53 /* AsteroidDetailPresenter.swift */; };
+		287900202654E5E20099AB53 /* AsteroidDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879001F2654E5E20099AB53 /* AsteroidDetailRouter.swift */; };
+		287900242654E6000099AB53 /* AsteroidDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287900232654E6000099AB53 /* AsteroidDetailConfigurator.swift */; };
 		287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E12637FB4300F34030 /* UIButton + Extension.swift */; };
 		287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E32637FD1200F34030 /* UIStackView + Extension.swift */; };
 		287C49E92638139E00F34030 /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C49E82638139E00F34030 /* AsteroidCell.swift */; };
@@ -24,12 +30,34 @@
 		2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FB2637ECE200D0FC12 /* APODModel.swift */; };
 		2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D0FF2637EE1700D0FC12 /* APODViewController.swift */; };
 		2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */; };
+		289FCE75264B5BF20014E522 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE74264B5BF20014E522 /* WelcomeInteractor.swift */; };
+		289FCE77264B5BFD0014E522 /* WelcomePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE76264B5BFD0014E522 /* WelcomePresentor.swift */; };
+		289FCE79264B5C1C0014E522 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE78264B5C1C0014E522 /* WelcomeRouter.swift */; };
+		289FCE7B264B5C2E0014E522 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE7A264B5C2E0014E522 /* WelcomeWorker.swift */; };
+		289FCE7D264B5C480014E522 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE7C264B5C480014E522 /* WelcomeModels.swift */; };
+		289FCE82264B6B150014E522 /* APODInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE81264B6B140014E522 /* APODInteractor.swift */; };
+		289FCE84264B6B210014E522 /* APODPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE83264B6B210014E522 /* APODPresenter.swift */; };
+		289FCE86264B6B2D0014E522 /* APODRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE85264B6B2D0014E522 /* APODRouter.swift */; };
+		289FCE8A264B6BA80014E522 /* APODModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE89264B6BA80014E522 /* APODModels.swift */; };
+		289FCE8C264B7E9E0014E522 /* WelcomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE8B264B7E9E0014E522 /* WelcomeConfigurator.swift */; };
+		289FCE8E264B80430014E522 /* APODConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE8D264B80430014E522 /* APODConfigurator.swift */; };
+		289FCE90264BEE570014E522 /* AsteroidsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE8F264BEE570014E522 /* AsteroidsInteractor.swift */; };
+		289FCE92264BEE640014E522 /* AsteroidsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE91264BEE640014E522 /* AsteroidsPresenter.swift */; };
+		289FCE94264BEEA10014E522 /* AsteroidsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE93264BEEA10014E522 /* AsteroidsModels.swift */; };
+		289FCE96264BEEAC0014E522 /* AsteroidsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE95264BEEAC0014E522 /* AsteroidsWorker.swift */; };
+		289FCE98264BEED80014E522 /* AsteroidsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FCE97264BEED80014E522 /* AsteroidsConfigurator.swift */; };
 		415ABD1AEB853AFC4A274943 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B044EEC2A3AAE00AEED111EA /* Pods_TestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09F57EF68321A86CC27530A9 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		285ADE872638422C008F7004 /* UIColor + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension .swift"; sourceTree = "<group>"; };
+		285ADE8A263853BB008F7004 /* AsteroidDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailVC.swift; sourceTree = "<group>"; };
+		287900192654DFA40099AB53 /* AsteroidsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsRouter.swift; sourceTree = "<group>"; };
+		2879001B2654E5CE0099AB53 /* AsteroidDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailInteractor.swift; sourceTree = "<group>"; };
+		2879001D2654E5D60099AB53 /* AsteroidDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailPresenter.swift; sourceTree = "<group>"; };
+		2879001F2654E5E20099AB53 /* AsteroidDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailRouter.swift; sourceTree = "<group>"; };
+		287900232654E6000099AB53 /* AsteroidDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDetailConfigurator.swift; sourceTree = "<group>"; };
 		287C49E12637FB4300F34030 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		287C49E32637FD1200F34030 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		287C49E82638139E00F34030 /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
@@ -48,6 +76,22 @@
 		2885D0FB2637ECE200D0FC12 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
 		2885D0FF2637EE1700D0FC12 /* APODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 		2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsViewController.swift; sourceTree = "<group>"; };
+		289FCE74264B5BF20014E522 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		289FCE76264B5BFD0014E522 /* WelcomePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresentor.swift; sourceTree = "<group>"; };
+		289FCE78264B5C1C0014E522 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		289FCE7A264B5C2E0014E522 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
+		289FCE7C264B5C480014E522 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
+		289FCE81264B6B140014E522 /* APODInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODInteractor.swift; sourceTree = "<group>"; };
+		289FCE83264B6B210014E522 /* APODPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODPresenter.swift; sourceTree = "<group>"; };
+		289FCE85264B6B2D0014E522 /* APODRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODRouter.swift; sourceTree = "<group>"; };
+		289FCE89264B6BA80014E522 /* APODModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModels.swift; sourceTree = "<group>"; };
+		289FCE8B264B7E9E0014E522 /* WelcomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConfigurator.swift; sourceTree = "<group>"; };
+		289FCE8D264B80430014E522 /* APODConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODConfigurator.swift; sourceTree = "<group>"; };
+		289FCE8F264BEE570014E522 /* AsteroidsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsInteractor.swift; sourceTree = "<group>"; };
+		289FCE91264BEE640014E522 /* AsteroidsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsPresenter.swift; sourceTree = "<group>"; };
+		289FCE93264BEEA10014E522 /* AsteroidsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsModels.swift; sourceTree = "<group>"; };
+		289FCE95264BEEAC0014E522 /* AsteroidsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsWorker.swift; sourceTree = "<group>"; };
+		289FCE97264BEED80014E522 /* AsteroidsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsConfigurator.swift; sourceTree = "<group>"; };
 		B044EEC2A3AAE00AEED111EA /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CD1A74635E3571403E0BBA /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,11 +108,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285ADE8926385382008F7004 /* AsteroidDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				285ADE8A263853BB008F7004 /* AsteroidDetailVC.swift */,
+				2879001B2654E5CE0099AB53 /* AsteroidDetailInteractor.swift */,
+				2879001D2654E5D60099AB53 /* AsteroidDetailPresenter.swift */,
+				2879001F2654E5E20099AB53 /* AsteroidDetailRouter.swift */,
+				287900232654E6000099AB53 /* AsteroidDetailConfigurator.swift */,
+			);
+			path = AsteroidDetailVC;
+			sourceTree = "<group>";
+		};
 		287C49DC2637F30100F34030 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
 				2885D0FF2637EE1700D0FC12 /* APODViewController.swift */,
-				2885D0FB2637ECE200D0FC12 /* APODModel.swift */,
+				289FCE81264B6B140014E522 /* APODInteractor.swift */,
+				289FCE83264B6B210014E522 /* APODPresenter.swift */,
+				289FCE85264B6B2D0014E522 /* APODRouter.swift */,
+				289FCE89264B6BA80014E522 /* APODModels.swift */,
+				289FCE8D264B80430014E522 /* APODConfigurator.swift */,
 			);
 			path = APOD;
 			sourceTree = "<group>";
@@ -78,7 +138,12 @@
 			children = (
 				287C49E5263807E400F34030 /* Cell */,
 				2885D1022637EE3300D0FC12 /* AsteroidsViewController.swift */,
-				2885D0F82637E91300D0FC12 /* AsteroidModel.swift */,
+				289FCE8F264BEE570014E522 /* AsteroidsInteractor.swift */,
+				289FCE91264BEE640014E522 /* AsteroidsPresenter.swift */,
+				287900192654DFA40099AB53 /* AsteroidsRouter.swift */,
+				289FCE93264BEEA10014E522 /* AsteroidsModels.swift */,
+				289FCE95264BEEAC0014E522 /* AsteroidsWorker.swift */,
+				289FCE97264BEED80014E522 /* AsteroidsConfigurator.swift */,
 			);
 			path = Asteroids;
 			sourceTree = "<group>";
@@ -87,6 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				2885D0E32637DD9F00D0FC12 /* WelcomeViewController.swift */,
+				289FCE74264B5BF20014E522 /* WelcomeInteractor.swift */,
+				289FCE76264B5BFD0014E522 /* WelcomePresentor.swift */,
+				289FCE78264B5C1C0014E522 /* WelcomeRouter.swift */,
+				289FCE7A264B5C2E0014E522 /* WelcomeWorker.swift */,
+				289FCE7C264B5C480014E522 /* WelcomeModels.swift */,
+				289FCE8B264B7E9E0014E522 /* WelcomeConfigurator.swift */,
 			);
 			path = WelcomeVC;
 			sourceTree = "<group>";
@@ -140,10 +211,12 @@
 			children = (
 				2885D0DF2637DD9F00D0FC12 /* AppDelegate.swift */,
 				2885D0E12637DD9F00D0FC12 /* SceneDelegate.swift */,
+				285ADE8926385382008F7004 /* AsteroidDetailVC */,
 				2885D1052637F03100D0FC12 /* Services */,
 				287C49DE2637F37300F34030 /* WelcomeVC */,
 				287C49DC2637F30100F34030 /* APOD */,
 				287C49DD2637F34000F34030 /* Asteroids */,
+				289FCE80264B6AEC0014E522 /* Models */,
 				287C49DF2637FB1C00F34030 /* Extensions */,
 				2885D0E52637DD9F00D0FC12 /* Main.storyboard */,
 				2885D0E82637DDA200D0FC12 /* Assets.xcassets */,
@@ -161,6 +234,15 @@
 				287C49EE2638255D00F34030 /* API.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		289FCE80264B6AEC0014E522 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2885D0F82637E91300D0FC12 /* AsteroidModel.swift */,
+				2885D0FB2637ECE200D0FC12 /* APODModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2DD626FF7DF885B86F58C60B /* Pods */ = {
@@ -276,19 +358,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289FCE96264BEEAC0014E522 /* AsteroidsWorker.swift in Sources */,
+				289FCE98264BEED80014E522 /* AsteroidsConfigurator.swift in Sources */,
 				287C49ED263824BE00F34030 /* NetworkDataFeatcher.swift in Sources */,
+				289FCE90264BEE570014E522 /* AsteroidsInteractor.swift in Sources */,
 				2885D0E42637DD9F00D0FC12 /* WelcomeViewController.swift in Sources */,
 				2885D0FC2637ECE200D0FC12 /* APODModel.swift in Sources */,
 				2885D0F92637E91300D0FC12 /* AsteroidModel.swift in Sources */,
 				285ADE882638422C008F7004 /* UIColor + Extension .swift in Sources */,
 				287C49E42637FD1200F34030 /* UIStackView + Extension.swift in Sources */,
+				289FCE7D264B5C480014E522 /* WelcomeModels.swift in Sources */,
+				289FCE8C264B7E9E0014E522 /* WelcomeConfigurator.swift in Sources */,
+				2879001A2654DFA40099AB53 /* AsteroidsRouter.swift in Sources */,
+				287900242654E6000099AB53 /* AsteroidDetailConfigurator.swift in Sources */,
+				289FCE94264BEEA10014E522 /* AsteroidsModels.swift in Sources */,
+				289FCE82264B6B150014E522 /* APODInteractor.swift in Sources */,
+				2879001C2654E5CE0099AB53 /* AsteroidDetailInteractor.swift in Sources */,
+				289FCE77264B5BFD0014E522 /* WelcomePresentor.swift in Sources */,
+				287900202654E5E20099AB53 /* AsteroidDetailRouter.swift in Sources */,
 				2885D1002637EE1700D0FC12 /* APODViewController.swift in Sources */,
+				289FCE8A264B6BA80014E522 /* APODModels.swift in Sources */,
+				289FCE92264BEE640014E522 /* AsteroidsPresenter.swift in Sources */,
+				289FCE7B264B5C2E0014E522 /* WelcomeWorker.swift in Sources */,
+				285ADE8B263853BB008F7004 /* AsteroidDetailVC.swift in Sources */,
+				289FCE79264B5C1C0014E522 /* WelcomeRouter.swift in Sources */,
+				2879001E2654E5D60099AB53 /* AsteroidDetailPresenter.swift in Sources */,
+				289FCE8E264B80430014E522 /* APODConfigurator.swift in Sources */,
 				2885D0E02637DD9F00D0FC12 /* AppDelegate.swift in Sources */,
+				289FCE86264B6B2D0014E522 /* APODRouter.swift in Sources */,
+				289FCE75264B5BF20014E522 /* WelcomeInteractor.swift in Sources */,
 				287C49E92638139E00F34030 /* AsteroidCell.swift in Sources */,
 				287C49EF2638255D00F34030 /* API.swift in Sources */,
 				287C49E22637FB4300F34030 /* UIButton + Extension.swift in Sources */,
 				2885D1032637EE3300D0FC12 /* AsteroidsViewController.swift in Sources */,
 				2885D0F52637E1DC00D0FC12 /* NetworkService.swift in Sources */,
+				289FCE84264B6B210014E522 /* APODPresenter.swift in Sources */,
 				2885D0E22637DD9F00D0FC12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

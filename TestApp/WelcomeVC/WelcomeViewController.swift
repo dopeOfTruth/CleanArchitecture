@@ -7,10 +7,18 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+
+protocol WelcomeDisplayLogic: AnyObject {
+    
+}
+
+class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
 
     let goToApodVCButton = UIButton(title: "Astronomy Picture of the Day", titleColor: .white, backgroundColor: .backgroundForElements(), fontSize: 20, cornerRadius: 8)
     let goToAsteroidsVCButton = UIButton(title: "Near Earth Objects", titleColor: .white, backgroundColor: .backgroundForElements(), fontSize: 20, cornerRadius: 8)
+    
+    var interactor: WelcomeBusinessLogic?
+    var router: (NSObjectProtocol & WelcomeRoutingLogic & WelcomeDataPassing)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +29,28 @@ class WelcomeViewController: UIViewController {
         
         goToAsteroidsVCButton.addTarget(self, action: #selector(goToAsteroidsVCButtonTapped), for: .touchUpInside)
         goToApodVCButton.addTarget(self, action: #selector(goToApodVCButtonTapped), for: .touchUpInside)
+        
+        WelcomeConfigurator.shared.configure(view: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+              router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    
     @objc private func goToAsteroidsVCButtonTapped() {
-        let asteroidsVC = AsteroidsViewController()
-        navigationController?.pushViewController(asteroidsVC, animated: true)
+//        let asteroidsVC = AsteroidsViewController()
+//        navigationController?.pushViewController(asteroidsVC, animated: true)
+        router?.routeToAsteroids(segue: nil)
     }
     
     @objc private func goToApodVCButtonTapped() {
-        let apodVC = APODViewController()
-        navigationController?.pushViewController(apodVC, animated: true)
+        router?.routeToAPOD(segue: nil)
     }
 }
 

@@ -15,24 +15,25 @@ class AsteroidCell: UICollectionViewCell {
     let relativeVelocityLabel = UILabel()
     let diameterLabel = UILabel()
     let separatorView = UIView()
+    let dateLabel = UILabel()
     
     let containerView = UIView()
     
-    
-    
     private func setupConstraints() {
         
-        asteroidNameLabel.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
+        asteroidNameLabel.translatesAutoresizingMaskIntoConstraints = false
         relativeVelocityLabel.translatesAutoresizingMaskIntoConstraints = false
         diameterLabel.translatesAutoresizingMaskIntoConstraints = false
         separatorView.translatesAutoresizingMaskIntoConstraints = false
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(containerView)
         containerView.addSubview(asteroidNameLabel)
         containerView.addSubview(relativeVelocityLabel)
         containerView.addSubview(diameterLabel)
         containerView.addSubview(separatorView)
+        containerView.addSubview(dateLabel)
         
         NSLayoutConstraint.activate([
             containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -41,6 +42,7 @@ class AsteroidCell: UICollectionViewCell {
             containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
+        
         NSLayoutConstraint.activate([
             asteroidNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             asteroidNameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
@@ -48,22 +50,29 @@ class AsteroidCell: UICollectionViewCell {
         ])
         
         NSLayoutConstraint.activate([
+            dateLabel.topAnchor.constraint(equalTo: asteroidNameLabel.bottomAnchor),
+            dateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+            dateLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            
+        ])
+        
+        NSLayoutConstraint.activate([
             separatorView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             separatorView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            separatorView.topAnchor.constraint(equalTo: asteroidNameLabel.bottomAnchor, constant: 16),
+            separatorView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 16),
             separatorView.heightAnchor.constraint(equalToConstant: 2)
         ])
         
         NSLayoutConstraint.activate([
             relativeVelocityLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
             relativeVelocityLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
-            relativeVelocityLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 22)
+            relativeVelocityLabel.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 15)
         ])
         
         NSLayoutConstraint.activate([
             diameterLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
             diameterLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
-            diameterLabel.topAnchor.constraint(equalTo: relativeVelocityLabel.bottomAnchor, constant: 20)
+            diameterLabel.topAnchor.constraint(equalTo: relativeVelocityLabel.bottomAnchor, constant: 15)
         ])
     }
     
@@ -95,25 +104,19 @@ class AsteroidCell: UICollectionViewCell {
         relativeVelocityLabel.textColor = .white
         diameterLabel.textColor = .white
         asteroidNameLabel.textColor = .white
+        dateLabel.textColor = .gray
+        dateLabel.font = UIFont.systemFont(ofSize: 13, weight: .bold)
+        dateLabel.textAlignment = .right
         
         separatorView.backgroundColor = .mainBackground()
         separatorView.layer.opacity = 0.6
     }
     
-    func configure(with asteroid: NearEarthObject) {
-        asteroidNameLabel.text = asteroid.name
-        
-        if let kilometersPerHour = asteroid.closeApproachData.first?.relativeVelocity.kilometersPerHour {
-            
-            if let relativeVelocity = Double(kilometersPerHour) {
-                
-                relativeVelocityLabel.text = "Relative velocity \(String(format: "%.2f", relativeVelocity)) km per hour"
-            }
-        }
-        
-        let min = asteroid.estimatedDiameter.kilometers.estimatedDiameterMin
-        let max = asteroid.estimatedDiameter.kilometers.estimatedDiameterMax
-        diameterLabel.text = "Diametr km: min = \(String(format:"%.2f", min)); max \(String(format:"%.2f", max))"
+    func configure(with asteroid: Asteroids.FetchData.ViewModel.Object) {
+        asteroidNameLabel.text = asteroid.asteroidName
+        dateLabel.text = asteroid.date
+        relativeVelocityLabel.text = asteroid.relativeVelocity
+        diameterLabel.text = asteroid.diameter
         
     }
     
